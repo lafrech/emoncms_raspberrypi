@@ -481,7 +481,7 @@ class RFM2PiGateway():
 
         self.log.debug("Sending time for emonGLCD: %d:%d" % (now.hour, now.minute))
 
-        self._ser.write("%02d,00,%02d,00,s" % (now.hour, now.minute))
+        self._ser.write("00,%02d,%02d,00,s" % (now.hour, now.minute))
 
 
 if __name__ == "__main__":
